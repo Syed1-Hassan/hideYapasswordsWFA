@@ -1,0 +1,15 @@
+*.cachefile
+*.user
+*.db
+*.suo
+*.xnb
+*.pdb
+*.sln
+
+
+/bin
+app.config
+.gitattributes
+
+/Properties
+/obj
