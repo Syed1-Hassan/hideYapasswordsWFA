@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace hideYaPasswordWFA
 {
-    public partial class Form1 : Form
+    public partial class hideYApasswords : Form
     {
-        public Form1()
+        public hideYApasswords()
         {
             InitializeComponent();
         }
