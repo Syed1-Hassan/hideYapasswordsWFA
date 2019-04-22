@@ -5,7 +5,7 @@
 *.xnb
 *.pdb
 *.sln
-
+*.csproj
 
 /bin
 app.config
