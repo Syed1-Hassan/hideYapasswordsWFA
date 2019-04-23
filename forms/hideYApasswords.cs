@@ -68,7 +68,7 @@ namespace hideYaPasswordWFA
             this.UseEmailText.TabStop = false;
             this.UseEmailText.Text = "To Save Password click Save Password";
             this.UseEmailText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.UseEmailText.TextChanged += new System.EventHandler(this.UseEmailText_TextChanged);
+           
             // 
             // textBox1
             // 
@@ -104,9 +104,6 @@ namespace hideYaPasswordWFA
 
         }
 
-        private void UseEmailText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
