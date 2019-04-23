@@ -17,6 +17,18 @@ namespace hideYaPasswordWFA
             InitializeComponent();
         }
 
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // passcode
+            // 
+            this.ClientSize = new System.Drawing.Size(299, 314);
+            this.Name = "passcode";
+            this.ResumeLayout(false);
+
+        }
+
         
     }
 }
