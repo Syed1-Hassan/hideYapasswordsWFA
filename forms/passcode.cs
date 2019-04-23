@@ -12,8 +12,8 @@ namespace hideYaPasswordWFA
 {
     public partial class passcode : Form
     {
-        private TextBox emailTextbox;
-        private TextBox UseEmailText;
+        private TextBox passcodeTxtBox;
+        private TextBox enterPassTxt;
     
         public passcode()
         {
@@ -22,40 +22,40 @@ namespace hideYaPasswordWFA
 
         private void InitializeComponent()
         {
-            this.UseEmailText = new System.Windows.Forms.TextBox();
-            this.emailTextbox = new System.Windows.Forms.TextBox();
+            this.enterPassTxt = new System.Windows.Forms.TextBox();
+            this.passcodeTxtBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // UseEmailText
+            // enterPassTxt
             // 
-            this.UseEmailText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UseEmailText.CausesValidation = false;
-            this.UseEmailText.Cursor = System.Windows.Forms.Cursors.Default;
-            this.UseEmailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UseEmailText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.UseEmailText.Location = new System.Drawing.Point(50, 84);
-            this.UseEmailText.Multiline = true;
-            this.UseEmailText.Name = "UseEmailText";
-            this.UseEmailText.ReadOnly = true;
-            this.UseEmailText.Size = new System.Drawing.Size(130, 41);
-            this.UseEmailText.TabIndex = 5;
-            this.UseEmailText.TabStop = false;
-            this.UseEmailText.Text = "Enter 3 Digit Passcode";
-            this.UseEmailText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.enterPassTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.enterPassTxt.CausesValidation = false;
+            this.enterPassTxt.Cursor = System.Windows.Forms.Cursors.Default;
+            this.enterPassTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterPassTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.enterPassTxt.Location = new System.Drawing.Point(50, 84);
+            this.enterPassTxt.Multiline = true;
+            this.enterPassTxt.Name = "enterPassTxt";
+            this.enterPassTxt.ReadOnly = true;
+            this.enterPassTxt.Size = new System.Drawing.Size(130, 41);
+            this.enterPassTxt.TabIndex = 5;
+            this.enterPassTxt.TabStop = false;
+            this.enterPassTxt.Text = "Enter 3 Digit Passcode";
+            this.enterPassTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // emailTextbox
+            // passcodeTxtBox
             // 
-            this.emailTextbox.Location = new System.Drawing.Point(50, 177);
-            this.emailTextbox.Name = "emailTextbox";
-            this.emailTextbox.PasswordChar = '*';
-            this.emailTextbox.Size = new System.Drawing.Size(130, 20);
-            this.emailTextbox.TabIndex = 6;
+            this.passcodeTxtBox.Location = new System.Drawing.Point(50, 177);
+            this.passcodeTxtBox.Name = "passcodeTxtBox";
+            this.passcodeTxtBox.PasswordChar = '*';
+            this.passcodeTxtBox.Size = new System.Drawing.Size(130, 20);
+            this.passcodeTxtBox.TabIndex = 6;
             // 
             // passcode
             // 
             this.ClientSize = new System.Drawing.Size(234, 361);
-            this.Controls.Add(this.emailTextbox);
-            this.Controls.Add(this.UseEmailText);
+            this.Controls.Add(this.passcodeTxtBox);
+            this.Controls.Add(this.enterPassTxt);
             this.Name = "passcode";
             this.Text = "Enter Passcode";
             this.ResumeLayout(false);

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.UseEncryptPassButton = new System.Windows.Forms.Button();
-            this.UseEmailText = new System.Windows.Forms.TextBox();
-            this.UseEncryptPassText = new System.Windows.Forms.TextBox();
+            this.getPassEmailTxt = new System.Windows.Forms.TextBox();
+            this.getPassEncKeyTxt = new System.Windows.Forms.TextBox();
             this.UseEmailButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -45,39 +45,39 @@
             this.UseEncryptPassButton.Text = "Use Encrypted Key";
             this.UseEncryptPassButton.UseVisualStyleBackColor = false;
             // 
-            // UseEmailText
+            // getPassEmailTxt
             // 
-            this.UseEmailText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UseEmailText.CausesValidation = false;
-            this.UseEmailText.Cursor = System.Windows.Forms.Cursors.Default;
-            this.UseEmailText.Enabled = false;
-            this.UseEmailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UseEmailText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.UseEmailText.Location = new System.Drawing.Point(35, 75);
-            this.UseEmailText.Multiline = true;
-            this.UseEmailText.Name = "UseEmailText";
-            this.UseEmailText.ReadOnly = true;
-            this.UseEmailText.Size = new System.Drawing.Size(170, 35);
-            this.UseEmailText.TabIndex = 3;
-            this.UseEmailText.TabStop = false;
-            this.UseEmailText.Text = "Get password via Entering Email";
+            this.getPassEmailTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.getPassEmailTxt.CausesValidation = false;
+            this.getPassEmailTxt.Cursor = System.Windows.Forms.Cursors.Default;
+            this.getPassEmailTxt.Enabled = false;
+            this.getPassEmailTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getPassEmailTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.getPassEmailTxt.Location = new System.Drawing.Point(35, 75);
+            this.getPassEmailTxt.Multiline = true;
+            this.getPassEmailTxt.Name = "getPassEmailTxt";
+            this.getPassEmailTxt.ReadOnly = true;
+            this.getPassEmailTxt.Size = new System.Drawing.Size(170, 35);
+            this.getPassEmailTxt.TabIndex = 3;
+            this.getPassEmailTxt.TabStop = false;
+            this.getPassEmailTxt.Text = "Get password via Entering Email";
             // 
-            // UseEncryptPassText
+            // getPassEncKeyTxt
             // 
-            this.UseEncryptPassText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UseEncryptPassText.CausesValidation = false;
-            this.UseEncryptPassText.Cursor = System.Windows.Forms.Cursors.Default;
-            this.UseEncryptPassText.Enabled = false;
-            this.UseEncryptPassText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UseEncryptPassText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.UseEncryptPassText.Location = new System.Drawing.Point(35, 231);
-            this.UseEncryptPassText.Multiline = true;
-            this.UseEncryptPassText.Name = "UseEncryptPassText";
-            this.UseEncryptPassText.ReadOnly = true;
-            this.UseEncryptPassText.Size = new System.Drawing.Size(170, 34);
-            this.UseEncryptPassText.TabIndex = 4;
-            this.UseEncryptPassText.TabStop = false;
-            this.UseEncryptPassText.Text = "Get Password via Pasting Encrypted Key in the text file";
+            this.getPassEncKeyTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.getPassEncKeyTxt.CausesValidation = false;
+            this.getPassEncKeyTxt.Cursor = System.Windows.Forms.Cursors.Default;
+            this.getPassEncKeyTxt.Enabled = false;
+            this.getPassEncKeyTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getPassEncKeyTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.getPassEncKeyTxt.Location = new System.Drawing.Point(35, 231);
+            this.getPassEncKeyTxt.Multiline = true;
+            this.getPassEncKeyTxt.Name = "getPassEncKeyTxt";
+            this.getPassEncKeyTxt.ReadOnly = true;
+            this.getPassEncKeyTxt.Size = new System.Drawing.Size(170, 34);
+            this.getPassEncKeyTxt.TabIndex = 4;
+            this.getPassEncKeyTxt.TabStop = false;
+            this.getPassEncKeyTxt.Text = "Get Password via Pasting Encrypted Key in the text file";
             // 
             // UseEmailButton
             // 
@@ -95,8 +95,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 361);
-            this.Controls.Add(this.UseEncryptPassText);
-            this.Controls.Add(this.UseEmailText);
+            this.Controls.Add(this.getPassEncKeyTxt);
+            this.Controls.Add(this.getPassEmailTxt);
             this.Controls.Add(this.UseEncryptPassButton);
             this.Controls.Add(this.UseEmailButton);
             this.MaximizeBox = false;
@@ -110,8 +110,8 @@
         #endregion
 
         private System.Windows.Forms.Button UseEncryptPassButton;
-        private System.Windows.Forms.TextBox UseEmailText;
-        private System.Windows.Forms.TextBox UseEncryptPassText;
+        private System.Windows.Forms.TextBox getPassEmailTxt;
+        private System.Windows.Forms.TextBox getPassEncKeyTxt;
         private System.Windows.Forms.Button UseEmailButton;
     }
 }
