@@ -9,17 +9,19 @@ namespace hideYApasswordsWFA.classes
 {
     class PassSecurity
     {
-        public void savePasscode(string passcode, Dictionary<char, char> passKey, string dir)
+        encryptionKey _getEncryptionKeyObj = new encryptionKey();
+        private Dictionary<char, char> Key = new Dictionary<char, char>();
+        public void savePasscode(string passcode, string dir)
         {
             encrypt code = new encrypt();
-            string encPasscode = code.funcEncrypt(passcode, passKey);
+            string encPasscode = code.funcEncrypt(passcode);
             code.saveEncrypt("Passcode", encPasscode, dir);
         }
-        public string decryptPasscode(string passcode, Dictionary<char, char> passKey)
+        public string decryptPasscode(string passcode)
         {
             string decPasscode = "";
             decrypt code = new decrypt();
-            return decPasscode = code.funcDecrypt(passcode, passKey);
+            return decPasscode = code.funcDecrypt(passcode);
         }
 
         public bool passcodeINfile(string dir)

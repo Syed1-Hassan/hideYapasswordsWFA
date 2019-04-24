@@ -58,6 +58,7 @@
             this.emailTextbox.Name = "emailTextbox";
             this.emailTextbox.Size = new System.Drawing.Size(203, 20);
             this.emailTextbox.TabIndex = 4;
+            this.emailTextbox.TextChanged += new System.EventHandler(this.emailTextbox_TextChanged);
             // 
             // EnterPasswordtxt
             // 

@@ -8,15 +8,19 @@ namespace hideYApasswordsWFA.classes
 {
     class encrypt
     {
-        public string funcEncrypt(string s, Dictionary<char, char> x)
+        encryptionKey _getEncryptionKeyObj = new encryptionKey();
+       private Dictionary<char, char> Key = new Dictionary<char, char>();
+       
+        public string funcEncrypt(string s)
         {
+            Key=_getEncryptionKeyObj.dictionary();
             string retEncrypt = "";
             for (int i = 0; i < s.Length; i++)
             {
 
-                if (x.ContainsKey(s[i]))
+                if (Key.ContainsKey(s[i]))
                 {
-                    retEncrypt = retEncrypt + x[s[i]];
+                    retEncrypt = retEncrypt + Key[s[i]];
                 }
 
             }

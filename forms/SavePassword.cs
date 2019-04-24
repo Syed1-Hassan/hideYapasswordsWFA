@@ -17,6 +17,11 @@ namespace hideYaPasswordWFA
             InitializeComponent();
         }
 
+        private void emailTextbox_TextChanged(object sender, EventArgs e)
+        {
+         
+        }
+
        
     }
 }
