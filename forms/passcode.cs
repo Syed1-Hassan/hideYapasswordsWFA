@@ -110,6 +110,15 @@ namespace hideYaPasswordWFA
                 MessageBox.Show("Invalid Passcode", "Program will END");
                 Environment.Exit(1);
             }
+            if (File.Exists(filename) && checkPasscodeTxtBox.Length==3)
+            {
+                string decryptedPasscode = _PassSecObj.decryptPasscode(_PassSecObj.fetchPasscodeFromDirectory(filename));
+                if (decryptedPasscode!=checkPasscodeTxtBox)
+                {
+                    MessageBox.Show("Invalid Passcode", "Program will END");
+                    Environment.Exit(1);
+                }
+            }
             
         }
 
