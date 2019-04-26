@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
+using hideYApasswordsWFA.classes;
 namespace hideYaPasswordWFA
 {
     public partial class passcode : Form
     {
+        PassSecurity _PassSecObj = new PassSecurity();
+        private string checkPasscodeTxtBox;
         private TextBox passcodeTxtBox;
         private Button enterPasscodeButton;
         private TextBox enterPassTxt;
@@ -52,7 +55,6 @@ namespace hideYaPasswordWFA
             this.passcodeTxtBox.PasswordChar = '*';
             this.passcodeTxtBox.Size = new System.Drawing.Size(88, 20);
             this.passcodeTxtBox.TabIndex = 6;
-            this.passcodeTxtBox.Validating += new System.ComponentModel.CancelEventHandler(this.passcodeTxtBox_Validating);
             // 
             // enterPasscodeButton
             // 
@@ -64,6 +66,7 @@ namespace hideYaPasswordWFA
             this.enterPasscodeButton.TabIndex = 7;
             this.enterPasscodeButton.Text = "Enter";
             this.enterPasscodeButton.UseVisualStyleBackColor = false;
+            this.enterPasscodeButton.Click += new System.EventHandler(this.enterPasscodeButton_Click);
             // 
             // passcode
             // 
@@ -71,6 +74,7 @@ namespace hideYaPasswordWFA
             this.Controls.Add(this.enterPasscodeButton);
             this.Controls.Add(this.passcodeTxtBox);
             this.Controls.Add(this.enterPassTxt);
+            this.MaximizeBox = false;
             this.Name = "passcode";
             this.Text = "Enter Passcode";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.passcode_FormClosing);
@@ -78,14 +82,8 @@ namespace hideYaPasswordWFA
             this.PerformLayout();
 
         }
-
-        private void passcodeTxtBox_Validating(object sender, CancelEventArgs e)
-        {
-            if (passcodeTxtBox.Text==string.Empty || passcodeTxtBox.Text.Length!=3)
-            {
-                MessageBox.Show("Enter 3 digit code");
-            }
-        }
+       
+       
 
         private void passcode_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -95,6 +93,24 @@ namespace hideYaPasswordWFA
                 e.Cancel = true;
             }
            
+        }
+
+        private void enterPasscodeButton_Click(object sender, EventArgs e)
+        {
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+            checkPasscodeTxtBox = passcodeTxtBox.Text;
+           
+
+            if (!(File.Exists(filename)) && checkPasscodeTxtBox != "" && checkPasscodeTxtBox.Length == 3)
+            {
+                _PassSecObj.savePasscode(checkPasscodeTxtBox, filename);
+            }
+            else
+            {
+                MessageBox.Show("Invalid Passcode", "Program will END");
+                Environment.Exit(1);
+            }
+            
         }
 
      
