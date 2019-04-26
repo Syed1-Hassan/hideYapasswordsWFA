@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace hideYaPasswordWFA
 {
     public partial class hideYApasswords : Form
@@ -40,6 +40,7 @@ namespace hideYaPasswordWFA
             this.GetPasswordButton.TabIndex = 1;
             this.GetPasswordButton.Text = "Get Password";
             this.GetPasswordButton.UseVisualStyleBackColor = false;
+            this.GetPasswordButton.Click += new System.EventHandler(this.GetPasswordButton_Click);
             // 
             // SavePasswordButton
             // 
@@ -51,6 +52,7 @@ namespace hideYaPasswordWFA
             this.SavePasswordButton.TabIndex = 0;
             this.SavePasswordButton.Text = "Save Password";
             this.SavePasswordButton.UseVisualStyleBackColor = false;
+            this.SavePasswordButton.Click += new System.EventHandler(this.SavePasswordButton_Click);
             // 
             // savePassTxt
             // 
@@ -98,9 +100,35 @@ namespace hideYaPasswordWFA
             this.MaximizeBox = false;
             this.Name = "hideYApasswords";
             this.Text = "hideYapasswords";
+            this.Load += new System.EventHandler(this.hideYApasswords_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void SavePasswordButton_Click(object sender, EventArgs e)
+        {
+            SavePassword _savPassObj = new SavePassword();
+            _savPassObj.ShowDialog();
+        }
+
+        private void GetPasswordButton_Click(object sender, EventArgs e)
+        {
+            GetPassword _getPassObj = new GetPassword();
+            _getPassObj.ShowDialog();
+        }
+
+        private void hideYApasswords_Load(object sender, EventArgs e)
+        {
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+
+            if (File.Exists(filename) == false)
+            {
+                MessageBox.Show("First Save 3 Digit Passcode");
+                passcode _passObj = new passcode();
+                _passObj.ShowDialog();
+                            
+            }
         }
 
       

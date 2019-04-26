@@ -13,6 +13,7 @@ namespace hideYaPasswordWFA
     public partial class passcode : Form
     {
         private TextBox passcodeTxtBox;
+        private Button enterPasscodeButton;
         private TextBox enterPassTxt;
     
         public passcode()
@@ -24,6 +25,7 @@ namespace hideYaPasswordWFA
         {
             this.enterPassTxt = new System.Windows.Forms.TextBox();
             this.passcodeTxtBox = new System.Windows.Forms.TextBox();
+            this.enterPasscodeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // enterPassTxt
@@ -33,7 +35,7 @@ namespace hideYaPasswordWFA
             this.enterPassTxt.Cursor = System.Windows.Forms.Cursors.Default;
             this.enterPassTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterPassTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.enterPassTxt.Location = new System.Drawing.Point(50, 84);
+            this.enterPassTxt.Location = new System.Drawing.Point(50, 41);
             this.enterPassTxt.Multiline = true;
             this.enterPassTxt.Name = "enterPassTxt";
             this.enterPassTxt.ReadOnly = true;
@@ -45,23 +47,64 @@ namespace hideYaPasswordWFA
             // 
             // passcodeTxtBox
             // 
-            this.passcodeTxtBox.Location = new System.Drawing.Point(50, 177);
+            this.passcodeTxtBox.Location = new System.Drawing.Point(70, 135);
             this.passcodeTxtBox.Name = "passcodeTxtBox";
             this.passcodeTxtBox.PasswordChar = '*';
-            this.passcodeTxtBox.Size = new System.Drawing.Size(130, 20);
+            this.passcodeTxtBox.Size = new System.Drawing.Size(88, 20);
             this.passcodeTxtBox.TabIndex = 6;
+            this.passcodeTxtBox.Validating += new System.ComponentModel.CancelEventHandler(this.passcodeTxtBox_Validating);
+            // 
+            // enterPasscodeButton
+            // 
+            this.enterPasscodeButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.enterPasscodeButton.ForeColor = System.Drawing.Color.Black;
+            this.enterPasscodeButton.Location = new System.Drawing.Point(80, 190);
+            this.enterPasscodeButton.Name = "enterPasscodeButton";
+            this.enterPasscodeButton.Size = new System.Drawing.Size(62, 25);
+            this.enterPasscodeButton.TabIndex = 7;
+            this.enterPasscodeButton.Text = "Enter";
+            this.enterPasscodeButton.UseVisualStyleBackColor = false;
             // 
             // passcode
             // 
             this.ClientSize = new System.Drawing.Size(234, 361);
+            this.Controls.Add(this.enterPasscodeButton);
             this.Controls.Add(this.passcodeTxtBox);
             this.Controls.Add(this.enterPassTxt);
             this.Name = "passcode";
             this.Text = "Enter Passcode";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.passcode_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+        private void passcodeTxtBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (passcodeTxtBox.Text==string.Empty || passcodeTxtBox.Text.Length!=3)
+            {
+                MessageBox.Show("Enter 3 digit code");
+            }
+        }
+
+        private void passcode_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (passcodeTxtBox.Text == string.Empty || passcodeTxtBox.Text.Length != 3)
+            {
+                MessageBox.Show("Enter 3 digit code");
+                e.Cancel = true;
+            }
+           
+        }
+
+     
+
+     
+
+        
+        
+
+        
 
         
     }

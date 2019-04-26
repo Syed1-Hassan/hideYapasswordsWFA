@@ -1,6 +1,6 @@
 ﻿namespace hideYaPasswordWFA
 {
-    partial class Get_Password
+    partial class GetPassword
     {
         /// <summary>
         /// Required designer variable.

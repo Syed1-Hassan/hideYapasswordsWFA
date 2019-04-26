@@ -10,18 +10,14 @@ using System.Windows.Forms;
 
 namespace hideYaPasswordWFA
 {
-    public partial class Save_Password : Form
+    public partial class SavePassword : Form
     {
-        public Save_Password()
+        public SavePassword()
         {
             InitializeComponent();
         }
 
-        private void emailTextbox_TextChanged(object sender, EventArgs e)
-        {
-         
-        }
-
+        
        
     }
 }

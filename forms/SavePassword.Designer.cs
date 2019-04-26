@@ -1,6 +1,6 @@
 ﻿namespace hideYaPasswordWFA
 {
-    partial class Save_Password
+    partial class SavePassword
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,6 @@
             this.emailTextbox.Name = "emailTextbox";
             this.emailTextbox.Size = new System.Drawing.Size(203, 20);
             this.emailTextbox.TabIndex = 4;
-            this.emailTextbox.TextChanged += new System.EventHandler(this.emailTextbox_TextChanged);
             // 
             // EnterPasswordtxt
             // 
@@ -88,24 +87,25 @@
             // 
             this.SavePasswordButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.SavePasswordButton.ForeColor = System.Drawing.Color.Black;
-            this.SavePasswordButton.Location = new System.Drawing.Point(358, 229);
+            this.SavePasswordButton.Location = new System.Drawing.Point(343, 220);
             this.SavePasswordButton.Name = "SavePasswordButton";
             this.SavePasswordButton.Size = new System.Drawing.Size(79, 28);
             this.SavePasswordButton.TabIndex = 7;
             this.SavePasswordButton.Text = "Save";
             this.SavePasswordButton.UseVisualStyleBackColor = false;
             // 
-            // Save_Password
+            // SavePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 339);
+            this.ClientSize = new System.Drawing.Size(434, 361);
             this.Controls.Add(this.SavePasswordButton);
             this.Controls.Add(this.passwordTextbox);
             this.Controls.Add(this.EnterPasswordtxt);
             this.Controls.Add(this.emailTextbox);
             this.Controls.Add(this.EnterEmailtxt);
-            this.Name = "Save_Password";
+            this.MaximizeBox = false;
+            this.Name = "SavePassword";
             this.Text = "Save_Password";
             this.ResumeLayout(false);
             this.PerformLayout();
