@@ -14,13 +14,13 @@ namespace hideYaPasswordWFA
 {
     public partial class GetPassword : Form
     {
-        passcode _passcodeObj = new passcode();
+        passcode _passcodeObj=new passcode();
         PassSecurity _PassSecObj = new PassSecurity();
         public GetPassword()
         {
             InitializeComponent();
         }
-
+       
         private void GetPassword_Load(object sender, EventArgs e)
         {
             string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
@@ -34,6 +34,11 @@ namespace hideYaPasswordWFA
                     Environment.Exit(1);
                 }
             }
+        }
+
+        private void UseEmailButton_Click(object sender, EventArgs e)
+        {
+           
         }
 
         

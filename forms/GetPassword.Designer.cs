@@ -89,6 +89,7 @@
             this.UseEmailButton.TabIndex = 1;
             this.UseEmailButton.Text = "Use Email";
             this.UseEmailButton.UseVisualStyleBackColor = false;
+            this.UseEmailButton.Click += new System.EventHandler(this.UseEmailButton_Click);
             // 
             // GetPassword
             // 
