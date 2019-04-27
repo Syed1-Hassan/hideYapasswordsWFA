@@ -93,6 +93,7 @@
             this.SavePasswordButton.TabIndex = 7;
             this.SavePasswordButton.Text = "Save";
             this.SavePasswordButton.UseVisualStyleBackColor = false;
+            this.SavePasswordButton.Click += new System.EventHandler(this.SavePasswordButton_Click);
             // 
             // SavePassword
             // 

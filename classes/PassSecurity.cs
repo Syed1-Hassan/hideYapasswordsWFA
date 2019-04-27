@@ -24,15 +24,15 @@ namespace hideYApasswordsWFA.classes
             return decPasscode = code.funcDecrypt(passcode);
         }
 
-        public bool passcodeINfile(string dir)
-        {
-            StreamReader reader = new StreamReader(dir);
-            Regex reg = new Regex(@"^passcode \: \w {3}$");
-            string line = reader.ReadLine();
-            Match passcodeMatch = reg.Match(line);
-            return (passcodeMatch.Success);
+        //public bool passcodeINfile(string dir)
+        //{
+        //    StreamReader reader = new StreamReader(dir);
+        //    Regex reg = new Regex(@"^passcode \: \w {3}$");
+        //    string line = reader.ReadLine();
+        //    Match passcodeMatch = reg.Match(line);
+        //    return (passcodeMatch.Success);
 
-        }
+        //}
         public string enterPasscode()
         {
             string pass;

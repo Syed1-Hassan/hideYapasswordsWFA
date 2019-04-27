@@ -90,7 +90,7 @@
             this.UseEmailButton.Text = "Use Email";
             this.UseEmailButton.UseVisualStyleBackColor = false;
             // 
-            // Get_Password
+            // GetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,8 +100,9 @@
             this.Controls.Add(this.UseEncryptPassButton);
             this.Controls.Add(this.UseEmailButton);
             this.MaximizeBox = false;
-            this.Name = "Get_Password";
+            this.Name = "GetPassword";
             this.Text = "Get_Password";
+            this.Load += new System.EventHandler(this.GetPassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,7 +14,8 @@ namespace hideYaPasswordWFA
     public partial class passcode : Form
     {
         PassSecurity _PassSecObj = new PassSecurity();
-        private string checkPasscodeTxtBox;
+        
+        public string checkPasscodeTxtBox;
         private TextBox passcodeTxtBox;
         private Button enterPasscodeButton;
         private TextBox enterPassTxt;
@@ -77,26 +78,14 @@ namespace hideYaPasswordWFA
             this.MaximizeBox = false;
             this.Name = "passcode";
             this.Text = "Enter Passcode";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.passcode_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-       
-       
-
-        private void passcode_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (passcodeTxtBox.Text == string.Empty || passcodeTxtBox.Text.Length != 3)
-            {
-                MessageBox.Show("Enter 3 digit code");
-                e.Cancel = true;
-            }
-           
-        }
-
+        }        
         private void enterPasscodeButton_Click(object sender, EventArgs e)
         {
+            passcode _passcodeObj = new passcode();
+            hideYApasswords _hideYApassObj = new hideYApasswords();
             string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
             checkPasscodeTxtBox = passcodeTxtBox.Text;
            
@@ -110,16 +99,11 @@ namespace hideYaPasswordWFA
                 MessageBox.Show("Invalid Passcode", "Program will END");
                 Environment.Exit(1);
             }
-            if (File.Exists(filename) && checkPasscodeTxtBox.Length==3)
-            {
-                string decryptedPasscode = _PassSecObj.decryptPasscode(_PassSecObj.fetchPasscodeFromDirectory(filename));
-                if (decryptedPasscode!=checkPasscodeTxtBox)
-                {
-                    MessageBox.Show("Invalid Passcode", "Program will END");
-                    Environment.Exit(1);
-                }
-            }
             
+            
+            _passcodeObj.Close();
+            _hideYApassObj.Show();
+         
         }
 
      
