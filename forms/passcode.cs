@@ -15,7 +15,7 @@ namespace hideYaPasswordWFA
     {
        
         PassSecurity _PassSecObj = new PassSecurity();
-        
+        public bool IspasscodeRight = false;
         public string checkPasscodeTxtBox;
         private TextBox passcodeTxtBox;
         private Button enterPasscodeButton;
@@ -102,13 +102,14 @@ namespace hideYaPasswordWFA
                     MessageBox.Show("Invalid Passcode", "Program will END");
                     Environment.Exit(1);
                 }
+                else
+                    IspasscodeRight = true;
             }
             else
             {
                 MessageBox.Show("Invalid Passcode", "Program will END");
                 Environment.Exit(1);
-            } 
-           
+            }
             this.Close();
                        
           }

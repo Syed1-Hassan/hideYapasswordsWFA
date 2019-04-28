@@ -24,14 +24,17 @@ namespace hideYaPasswordWFA
        
         private void GetPassword_Load(object sender, EventArgs e)
         {
-            _passcodeObj.Show();
+            
         }
 
         private void UseEmailButton_Click(object sender, EventArgs e)
         {
-            getPasswordFrmEmail _getpassfrmEmailObj = new getPasswordFrmEmail();
-            _getpassfrmEmailObj.Show();
-           
+            _passcodeObj.ShowDialog();
+            if (_passcodeObj.IspasscodeRight==true)
+            {
+                 getPasswordFrmEmail _getpassfrmEmailObj = new getPasswordFrmEmail();
+                 _getpassfrmEmailObj.Show();
+            }
         }
 
         private void opnTxtFileButton_Click(object sender, EventArgs e)
@@ -46,8 +49,12 @@ namespace hideYaPasswordWFA
 
         private void UseEncryptPassButton_Click(object sender, EventArgs e)
         {
-            getPassFrmPassword _getpassFrmPasswordObj = new getPassFrmPassword();
-            _getpassFrmPasswordObj.Show();
+            _passcodeObj.ShowDialog();
+            if (_passcodeObj.IspasscodeRight == true)
+            {
+                getPassFrmPassword _getpassFrmPasswordObj = new getPassFrmPassword();
+                _getpassFrmPasswordObj.Show();
+            }
         }
 
        

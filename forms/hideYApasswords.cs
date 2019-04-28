@@ -100,7 +100,6 @@ namespace hideYaPasswordWFA
             this.MaximizeBox = false;
             this.Name = "hideYApasswords";
             this.Text = "hideYapasswords";
-            this.Load += new System.EventHandler(this.hideYApasswords_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,12 +113,6 @@ namespace hideYaPasswordWFA
 
         private void GetPasswordButton_Click(object sender, EventArgs e)
         {
-            GetPassword _getPassObj = new GetPassword();
-            _getPassObj.ShowDialog();
-        }
-
-        private void hideYApasswords_Load(object sender, EventArgs e)
-        {
             string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
 
             if (File.Exists(filename) == false)
@@ -127,10 +120,14 @@ namespace hideYaPasswordWFA
                 MessageBox.Show("First Save 3 Digit Passcode");
                 passcode _passObj = new passcode();
                 _passObj.ShowDialog();
-                return;        
+
+            }
+            else
+            {
+                GetPassword _getPassObj = new GetPassword();
+                _getPassObj.ShowDialog();
             }
         }
 
-      
     }
 }
