@@ -108,7 +108,6 @@
             this.MaximizeBox = false;
             this.Name = "SavePassword";
             this.Text = "Save_Password";
-            this.Load += new System.EventHandler(this.SavePassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

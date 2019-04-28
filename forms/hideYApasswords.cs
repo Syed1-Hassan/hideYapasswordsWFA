@@ -16,7 +16,7 @@ namespace hideYaPasswordWFA
         private TextBox savePassTxt;
         private TextBox getPassTxt;
         private Button SavePasswordButton;
-    
+        passcode _passcodeObj = new passcode();
         public hideYApasswords()
         {
             InitializeComponent();
@@ -107,8 +107,22 @@ namespace hideYaPasswordWFA
 
         private void SavePasswordButton_Click(object sender, EventArgs e)
         {
-            SavePassword _savPassObj = new SavePassword();
-            _savPassObj.Show();
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+
+            if (File.Exists(filename) == false)
+            {
+                MessageBox.Show("First Save 3 Digit Passcode");
+
+                _passcodeObj.ShowDialog();
+
+            }
+            else
+            {
+                SavePassword _savPassObj = new SavePassword();
+                _savPassObj.Show();
+            }
+
+            
         }
 
         private void GetPasswordButton_Click(object sender, EventArgs e)
@@ -118,8 +132,8 @@ namespace hideYaPasswordWFA
             if (File.Exists(filename) == false)
             {
                 MessageBox.Show("First Save 3 Digit Passcode");
-                passcode _passObj = new passcode();
-                _passObj.ShowDialog();
+               
+                _passcodeObj.ShowDialog();
 
             }
             else

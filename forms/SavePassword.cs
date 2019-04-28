@@ -21,15 +21,13 @@ namespace hideYaPasswordWFA
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
-        {
-            SavePassword _savPassObj = new SavePassword();
+        {           
             string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
             if (emailTextbox.Text != "" && passwordTextbox.Text != "")
             {
                 encrypt _encryptObj = new encrypt();
                 _encryptObj.saveEncrypt(emailTextbox.Text, _encryptObj.funcEncrypt(passwordTextbox.Text), filename);
-                _savPassObj.Close();
-               
+                this.Close();
             }
             else
             {
@@ -37,15 +35,6 @@ namespace hideYaPasswordWFA
                 Environment.Exit(1);
             }
         }
-
-        private void SavePassword_Load(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-        
        
     }
 }
