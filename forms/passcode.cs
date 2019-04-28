@@ -79,7 +79,6 @@ namespace hideYaPasswordWFA
             this.MaximizeBox = false;
             this.Name = "passcode";
             this.Text = "Enter Passcode";
-            this.Load += new System.EventHandler(this.passcode_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,24 +112,5 @@ namespace hideYaPasswordWFA
             this.Close();
                        
           }
-
-        private void passcode_Load(object sender, EventArgs e)
-        {
-            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
-
-        }
-
-        
-
-     
-
-     
-
-        
-        
-
-        
-
-        
     }
 }

@@ -22,11 +22,6 @@ namespace hideYaPasswordWFA
             InitializeComponent();
         }
        
-        private void GetPassword_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void UseEmailButton_Click(object sender, EventArgs e)
         {
             _passcodeObj.ShowDialog();
@@ -40,11 +35,13 @@ namespace hideYaPasswordWFA
         private void opnTxtFileButton_Click(object sender, EventArgs e)
         {
             string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
-
-            System.IO.FileInfo fileObj = new System.IO.FileInfo(filename);
-            fileObj.Attributes = System.IO.FileAttributes.ReadOnly;
-            System.Diagnostics.Process.Start(fileObj.FullName);
-
+            _passcodeObj.ShowDialog();
+            if (_passcodeObj.IspasscodeRight == true)
+            {
+                System.IO.FileInfo fileObj = new System.IO.FileInfo(filename);
+                fileObj.Attributes = System.IO.FileAttributes.ReadOnly;
+                System.Diagnostics.Process.Start(fileObj.FullName);
+            }
         }
 
         private void UseEncryptPassButton_Click(object sender, EventArgs e)
@@ -56,9 +53,6 @@ namespace hideYaPasswordWFA
                 _getpassFrmPasswordObj.Show();
             }
         }
-
-       
-
-        
+  
     }
 }
