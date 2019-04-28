@@ -11,8 +11,11 @@ Saves Email and Password's key in the text file.
 
 User can access his hidden passwords via Entering Email OR Pasting Password's key(saved in the Txt file). 
 
+![hideYApasswordsWFA](https://github.com/Syed1-Hassan/hideYApasswordsWFA/blob/master/hideYApasswords%20Screen%20shots/ss1.PNG)
 
+![hideYApasswordsWFA](https://github.com/Syed1-Hassan/hideYApasswordsWFA/blob/master/hideYApasswords%20Screen%20shots/ss2.PNG)
 
+![hideYApasswordsWFA](https://github.com/Syed1-Hassan/hideYApasswordsWFA/blob/master/hideYApasswords%20Screen%20shots/ss3.PNG)
 
 
 * **Used datastructure Dictionary<TKey, TValue>** to save every alphabetical and numeric character's key. 
