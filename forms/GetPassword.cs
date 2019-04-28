@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.IO;
 using hideYApasswordsWFA.classes;
 using System.Windows.Forms;
+using hideYApasswordsWFA.forms;
 
 namespace hideYaPasswordWFA
 {
@@ -23,23 +24,33 @@ namespace hideYaPasswordWFA
        
         private void GetPassword_Load(object sender, EventArgs e)
         {
-            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
-
-            if (File.Exists(filename) && _passcodeObj.checkPasscodeTxtBox.Length == 3)
-            {
-                string decryptedPasscode = _PassSecObj.decryptPasscode(_PassSecObj.fetchPasscodeFromDirectory(filename));
-                if (decryptedPasscode != _passcodeObj.checkPasscodeTxtBox)
-                {
-                    MessageBox.Show("Invalid Passcode", "Program will END");
-                    Environment.Exit(1);
-                }
-            }
+            _passcodeObj.Show();
         }
 
         private void UseEmailButton_Click(object sender, EventArgs e)
         {
+            getPasswordFrmEmail _getpassfrmEmailObj = new getPasswordFrmEmail();
+            _getpassfrmEmailObj.Show();
            
         }
+
+        private void opnTxtFileButton_Click(object sender, EventArgs e)
+        {
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+
+            System.IO.FileInfo fileObj = new System.IO.FileInfo(filename);
+            fileObj.Attributes = System.IO.FileAttributes.ReadOnly;
+            System.Diagnostics.Process.Start(fileObj.FullName);
+
+        }
+
+        private void UseEncryptPassButton_Click(object sender, EventArgs e)
+        {
+            getPassFrmPassword _getpassFrmPasswordObj = new getPassFrmPassword();
+            _getpassFrmPasswordObj.Show();
+        }
+
+       
 
         
     }

@@ -32,7 +32,7 @@
             this.emailTextbox = new System.Windows.Forms.TextBox();
             this.EnterPasswordtxt = new System.Windows.Forms.TextBox();
             this.passwordTextbox = new System.Windows.Forms.TextBox();
-            this.SavePasswordButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // EnterEmailtxt
@@ -83,24 +83,24 @@
             this.passwordTextbox.Size = new System.Drawing.Size(203, 20);
             this.passwordTextbox.TabIndex = 6;
             // 
-            // SavePasswordButton
+            // SaveButton
             // 
-            this.SavePasswordButton.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.SavePasswordButton.ForeColor = System.Drawing.Color.Black;
-            this.SavePasswordButton.Location = new System.Drawing.Point(343, 220);
-            this.SavePasswordButton.Name = "SavePasswordButton";
-            this.SavePasswordButton.Size = new System.Drawing.Size(79, 28);
-            this.SavePasswordButton.TabIndex = 7;
-            this.SavePasswordButton.Text = "Save";
-            this.SavePasswordButton.UseVisualStyleBackColor = false;
-            this.SavePasswordButton.Click += new System.EventHandler(this.SavePasswordButton_Click);
+            this.SaveButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.SaveButton.ForeColor = System.Drawing.Color.Black;
+            this.SaveButton.Location = new System.Drawing.Point(343, 220);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(79, 28);
+            this.SaveButton.TabIndex = 7;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // SavePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 361);
-            this.Controls.Add(this.SavePasswordButton);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.passwordTextbox);
             this.Controls.Add(this.EnterPasswordtxt);
             this.Controls.Add(this.emailTextbox);
@@ -108,6 +108,7 @@
             this.MaximizeBox = false;
             this.Name = "SavePassword";
             this.Text = "Save_Password";
+            this.Load += new System.EventHandler(this.SavePassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +120,6 @@
         private System.Windows.Forms.TextBox emailTextbox;
         private System.Windows.Forms.TextBox EnterPasswordtxt;
         private System.Windows.Forms.TextBox passwordTextbox;
-        private System.Windows.Forms.Button SavePasswordButton;
+        private System.Windows.Forms.Button SaveButton;
     }
 }

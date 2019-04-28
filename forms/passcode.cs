@@ -13,6 +13,7 @@ namespace hideYaPasswordWFA
 {
     public partial class passcode : Form
     {
+       
         PassSecurity _PassSecObj = new PassSecurity();
         
         public string checkPasscodeTxtBox;
@@ -78,14 +79,13 @@ namespace hideYaPasswordWFA
             this.MaximizeBox = false;
             this.Name = "passcode";
             this.Text = "Enter Passcode";
+            this.Load += new System.EventHandler(this.passcode_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }        
         private void enterPasscodeButton_Click(object sender, EventArgs e)
         {
-            passcode _passcodeObj = new passcode();
-            hideYApasswords _hideYApassObj = new hideYApasswords();
             string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
             checkPasscodeTxtBox = passcodeTxtBox.Text;
            
@@ -94,17 +94,32 @@ namespace hideYaPasswordWFA
             {
                 _PassSecObj.savePasscode(checkPasscodeTxtBox, filename);
             }
+            else if (File.Exists(filename) == true && this.passcodeTxtBox.Text.Length == 3)
+            {
+                string decryptedPasscode = _PassSecObj.decryptPasscode(_PassSecObj.fetchPasscodeFromDirectory(filename));
+                if (decryptedPasscode != this.checkPasscodeTxtBox)
+                {
+                    MessageBox.Show("Invalid Passcode", "Program will END");
+                    Environment.Exit(1);
+                }
+            }
             else
             {
                 MessageBox.Show("Invalid Passcode", "Program will END");
                 Environment.Exit(1);
-            }
-            
-            
-            _passcodeObj.Close();
-            _hideYApassObj.Show();
-         
+            } 
+           
+            this.Close();
+                       
+          }
+
+        private void passcode_Load(object sender, EventArgs e)
+        {
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+
         }
+
+        
 
      
 

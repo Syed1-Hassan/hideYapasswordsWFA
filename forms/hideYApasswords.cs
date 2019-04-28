@@ -109,7 +109,7 @@ namespace hideYaPasswordWFA
         private void SavePasswordButton_Click(object sender, EventArgs e)
         {
             SavePassword _savPassObj = new SavePassword();
-            _savPassObj.ShowDialog();
+            _savPassObj.Show();
         }
 
         private void GetPasswordButton_Click(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace hideYaPasswordWFA
                 MessageBox.Show("First Save 3 Digit Passcode");
                 passcode _passObj = new passcode();
                 _passObj.ShowDialog();
-                            
+                return;        
             }
         }
 

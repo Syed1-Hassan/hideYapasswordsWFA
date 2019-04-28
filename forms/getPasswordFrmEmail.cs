@@ -24,11 +24,11 @@ namespace hideYApasswordsWFA.forms
             PassSecurity _passSecObj = new PassSecurity();
             decrypt _decryptObj = new decrypt();
             string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
-            if (!(File.Exists(filename)) && getPassFrmEmailTxtbox.Text != "")
+            if ((File.Exists(filename)) && getPassFrmEmailTxtbox.Text != "")
             {
                string fetchedPasswordFrmDir= _passSecObj.fetchPasswordFromDirectory(filename, getPassFrmEmailTxtbox.Text);
-                string originalPassword = _decryptObj.funcDecrypt(fetchedPasswordFrmDir);
-                MessageBox.Show("Your orignal password is :", originalPassword);
+               string originalPassword = _decryptObj.funcDecrypt(fetchedPasswordFrmDir);
+               MessageBox.Show(originalPassword, "Your orignal password is :");
             }
         }
 

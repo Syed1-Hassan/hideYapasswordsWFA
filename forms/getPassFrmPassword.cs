@@ -24,10 +24,10 @@ namespace hideYApasswordsWFA.forms
             decrypt _decryptObj = new decrypt();
             string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
 
-            if (!(File.Exists(filename)) && GetpassFrmHiddenPassTextbox.Text != "")
+            if ((File.Exists(filename)) && GetpassFrmHiddenPassTextbox.Text != "")
             {
                 string originalPassword= _decryptObj.funcDecrypt(GetpassFrmHiddenPassTextbox.Text);
-                MessageBox.Show("Your orignal password is :", originalPassword);
+                MessageBox.Show(originalPassword,"Your orignal password is :" );
             }
           
         }
