@@ -30,7 +30,7 @@
         {
             this.getPassFrmEmailTxt = new System.Windows.Forms.TextBox();
             this.getPassFrmEmailTxtbox = new System.Windows.Forms.TextBox();
-            this.GetPassFrmPasswordBtn = new System.Windows.Forms.Button();
+            this.GetPassFrmEmailBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // getPassFrmEmailTxt
@@ -57,24 +57,25 @@
             this.getPassFrmEmailTxtbox.Size = new System.Drawing.Size(200, 20);
             this.getPassFrmEmailTxtbox.TabIndex = 5;
             // 
-            // GetPassFrmPasswordBtn
+            // GetPassFrmEmailBtn
             // 
-            this.GetPassFrmPasswordBtn.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.GetPassFrmPasswordBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GetPassFrmPasswordBtn.ForeColor = System.Drawing.Color.Black;
-            this.GetPassFrmPasswordBtn.Location = new System.Drawing.Point(355, 41);
-            this.GetPassFrmPasswordBtn.Name = "GetPassFrmPasswordBtn";
-            this.GetPassFrmPasswordBtn.Size = new System.Drawing.Size(67, 23);
-            this.GetPassFrmPasswordBtn.TabIndex = 9;
-            this.GetPassFrmPasswordBtn.Text = "Enter";
-            this.GetPassFrmPasswordBtn.UseVisualStyleBackColor = false;
+            this.GetPassFrmEmailBtn.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.GetPassFrmEmailBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GetPassFrmEmailBtn.ForeColor = System.Drawing.Color.Black;
+            this.GetPassFrmEmailBtn.Location = new System.Drawing.Point(355, 41);
+            this.GetPassFrmEmailBtn.Name = "GetPassFrmEmailBtn";
+            this.GetPassFrmEmailBtn.Size = new System.Drawing.Size(67, 23);
+            this.GetPassFrmEmailBtn.TabIndex = 9;
+            this.GetPassFrmEmailBtn.Text = "Enter";
+            this.GetPassFrmEmailBtn.UseVisualStyleBackColor = false;
+            this.GetPassFrmEmailBtn.Click += new System.EventHandler(this.GetPassFrmEmailBtn_Click);
             // 
             // getPasswordFrmEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 76);
-            this.Controls.Add(this.GetPassFrmPasswordBtn);
+            this.Controls.Add(this.GetPassFrmEmailBtn);
             this.Controls.Add(this.getPassFrmEmailTxtbox);
             this.Controls.Add(this.getPassFrmEmailTxt);
             this.Name = "getPasswordFrmEmail";
@@ -88,6 +89,6 @@
 
         private System.Windows.Forms.TextBox getPassFrmEmailTxt;
         private System.Windows.Forms.TextBox getPassFrmEmailTxtbox;
-        private System.Windows.Forms.Button GetPassFrmPasswordBtn;
+        private System.Windows.Forms.Button GetPassFrmEmailBtn;
     }
 }

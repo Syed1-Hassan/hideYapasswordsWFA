@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.EnterPasswordtxt = new System.Windows.Forms.TextBox();
-            this.passwordTextbox = new System.Windows.Forms.TextBox();
+            this.GetpassFrmHiddenPassTextbox = new System.Windows.Forms.TextBox();
             this.GetPassFrmPasswordBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -50,12 +50,12 @@
             this.EnterPasswordtxt.TabStop = false;
             this.EnterPasswordtxt.Text = "Enter Password";
             // 
-            // passwordTextbox
+            // GetpassFrmHiddenPassTextbox
             // 
-            this.passwordTextbox.Location = new System.Drawing.Point(155, 15);
-            this.passwordTextbox.Name = "passwordTextbox";
-            this.passwordTextbox.Size = new System.Drawing.Size(200, 20);
-            this.passwordTextbox.TabIndex = 7;
+            this.GetpassFrmHiddenPassTextbox.Location = new System.Drawing.Point(155, 15);
+            this.GetpassFrmHiddenPassTextbox.Name = "GetpassFrmHiddenPassTextbox";
+            this.GetpassFrmHiddenPassTextbox.Size = new System.Drawing.Size(200, 20);
+            this.GetpassFrmHiddenPassTextbox.TabIndex = 7;
             // 
             // GetPassFrmPasswordBtn
             // 
@@ -68,6 +68,7 @@
             this.GetPassFrmPasswordBtn.TabIndex = 8;
             this.GetPassFrmPasswordBtn.Text = "Enter";
             this.GetPassFrmPasswordBtn.UseVisualStyleBackColor = false;
+            this.GetPassFrmPasswordBtn.Click += new System.EventHandler(this.GetPassFrmPasswordBtn_Click);
             // 
             // getPassFrmPassword
             // 
@@ -75,7 +76,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 76);
             this.Controls.Add(this.GetPassFrmPasswordBtn);
-            this.Controls.Add(this.passwordTextbox);
+            this.Controls.Add(this.GetpassFrmHiddenPassTextbox);
             this.Controls.Add(this.EnterPasswordtxt);
             this.Name = "getPassFrmPassword";
             this.Text = "Get Password From Hidden Password";
@@ -87,7 +88,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox EnterPasswordtxt;
-        private System.Windows.Forms.TextBox passwordTextbox;
+        private System.Windows.Forms.TextBox GetpassFrmHiddenPassTextbox;
         private System.Windows.Forms.Button GetPassFrmPasswordBtn;
     }
 }

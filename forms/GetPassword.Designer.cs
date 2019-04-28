@@ -102,7 +102,7 @@
             this.Controls.Add(this.UseEmailButton);
             this.MaximizeBox = false;
             this.Name = "GetPassword";
-            this.Text = "Get_Password";
+            this.Text = "Get Password";
             this.Load += new System.EventHandler(this.GetPassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
