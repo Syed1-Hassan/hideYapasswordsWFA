@@ -24,6 +24,7 @@ namespace hideYaPasswordWFA
        
         private void UseEmailButton_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Only the recently added password would be shown so only type the most recent email you saved", "Warning !");
             _passcodeObj.ShowDialog();
             if (_passcodeObj.IspasscodeRight==true)
             {

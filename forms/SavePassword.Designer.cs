@@ -40,7 +40,6 @@
             this.EnterEmailtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EnterEmailtxt.CausesValidation = false;
             this.EnterEmailtxt.Cursor = System.Windows.Forms.Cursors.Default;
-            this.EnterEmailtxt.Enabled = false;
             this.EnterEmailtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnterEmailtxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.EnterEmailtxt.Location = new System.Drawing.Point(35, 93);
@@ -64,7 +63,6 @@
             this.EnterPasswordtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EnterPasswordtxt.CausesValidation = false;
             this.EnterPasswordtxt.Cursor = System.Windows.Forms.Cursors.Default;
-            this.EnterPasswordtxt.Enabled = false;
             this.EnterPasswordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnterPasswordtxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.EnterPasswordtxt.Location = new System.Drawing.Point(35, 171);

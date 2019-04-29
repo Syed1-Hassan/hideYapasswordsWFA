@@ -53,7 +53,6 @@
             this.getPassEmailTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.getPassEmailTxt.CausesValidation = false;
             this.getPassEmailTxt.Cursor = System.Windows.Forms.Cursors.Default;
-            this.getPassEmailTxt.Enabled = false;
             this.getPassEmailTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.getPassEmailTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.getPassEmailTxt.Location = new System.Drawing.Point(35, 58);
@@ -63,14 +62,13 @@
             this.getPassEmailTxt.Size = new System.Drawing.Size(170, 35);
             this.getPassEmailTxt.TabIndex = 3;
             this.getPassEmailTxt.TabStop = false;
-            this.getPassEmailTxt.Text = "Get password via Entering Email";
+            this.getPassEmailTxt.Text = "Get the RECENTLY added password via Entering Email";
             // 
             // getPassEncKeyTxt
             // 
             this.getPassEncKeyTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.getPassEncKeyTxt.CausesValidation = false;
             this.getPassEncKeyTxt.Cursor = System.Windows.Forms.Cursors.Default;
-            this.getPassEncKeyTxt.Enabled = false;
             this.getPassEncKeyTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.getPassEncKeyTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.getPassEncKeyTxt.Location = new System.Drawing.Point(35, 158);
@@ -111,7 +109,6 @@
             this.opnfileTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.opnfileTxt.CausesValidation = false;
             this.opnfileTxt.Cursor = System.Windows.Forms.Cursors.Default;
-            this.opnfileTxt.Enabled = false;
             this.opnfileTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.opnfileTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.opnfileTxt.Location = new System.Drawing.Point(35, 280);

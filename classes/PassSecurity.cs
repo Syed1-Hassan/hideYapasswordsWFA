@@ -66,7 +66,9 @@ namespace hideYApasswordsWFA.classes
             StreamReader reader = new StreamReader(dir);
             Regex reg = new Regex(email + @".+$");
             string line = reader.ReadToEnd();
-            Match emailMatch = reg.Match(line);
+            string text = line.ToString();
+            Match emailMatch = reg.Match(text);
+          
             if (emailMatch.Success)
             {
                 string Fetchemail = emailMatch.ToString();
