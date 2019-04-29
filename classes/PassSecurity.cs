@@ -33,18 +33,7 @@ namespace hideYApasswordsWFA.classes
         //    return (passcodeMatch.Success);
 
         //}
-        public string enterPasscode()
-        {
-            string pass;
-
-            do
-            {
-                pass = "123";
-               
-
-            } while (pass.Length >= 4);
-            return pass;
-        }
+      
         public string fetchPasscodeFromDirectory(string dir)
         {
             string passCode = "";
@@ -54,8 +43,7 @@ namespace hideYApasswordsWFA.classes
             {
                 passCode = passCode + s;
             }
-
-
+            reader.Close();
             return passCode;
 
         }
@@ -80,6 +68,7 @@ namespace hideYApasswordsWFA.classes
             }
             else
                 passWord = "No match for email";
+            reader.Close();
             return passWord;
 
         }

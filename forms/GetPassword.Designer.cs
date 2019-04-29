@@ -40,7 +40,7 @@
             // 
             this.UseEncryptPassButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.UseEncryptPassButton.ForeColor = System.Drawing.Color.Black;
-            this.UseEncryptPassButton.Location = new System.Drawing.Point(279, 158);
+            this.UseEncryptPassButton.Location = new System.Drawing.Point(279, 146);
             this.UseEncryptPassButton.Name = "UseEncryptPassButton";
             this.UseEncryptPassButton.Size = new System.Drawing.Size(108, 34);
             this.UseEncryptPassButton.TabIndex = 2;
@@ -55,7 +55,7 @@
             this.getPassEmailTxt.Cursor = System.Windows.Forms.Cursors.Default;
             this.getPassEmailTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.getPassEmailTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.getPassEmailTxt.Location = new System.Drawing.Point(35, 58);
+            this.getPassEmailTxt.Location = new System.Drawing.Point(35, 37);
             this.getPassEmailTxt.Multiline = true;
             this.getPassEmailTxt.Name = "getPassEmailTxt";
             this.getPassEmailTxt.ReadOnly = true;
@@ -71,7 +71,7 @@
             this.getPassEncKeyTxt.Cursor = System.Windows.Forms.Cursors.Default;
             this.getPassEncKeyTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.getPassEncKeyTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.getPassEncKeyTxt.Location = new System.Drawing.Point(35, 158);
+            this.getPassEncKeyTxt.Location = new System.Drawing.Point(35, 146);
             this.getPassEncKeyTxt.Multiline = true;
             this.getPassEncKeyTxt.Name = "getPassEncKeyTxt";
             this.getPassEncKeyTxt.ReadOnly = true;
@@ -84,7 +84,7 @@
             // 
             this.UseEmailButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.UseEmailButton.ForeColor = System.Drawing.Color.Black;
-            this.UseEmailButton.Location = new System.Drawing.Point(279, 58);
+            this.UseEmailButton.Location = new System.Drawing.Point(279, 37);
             this.UseEmailButton.Name = "UseEmailButton";
             this.UseEmailButton.Size = new System.Drawing.Size(108, 35);
             this.UseEmailButton.TabIndex = 1;
@@ -96,7 +96,7 @@
             // 
             this.opnTxtFileButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.opnTxtFileButton.ForeColor = System.Drawing.Color.Black;
-            this.opnTxtFileButton.Location = new System.Drawing.Point(279, 280);
+            this.opnTxtFileButton.Location = new System.Drawing.Point(279, 267);
             this.opnTxtFileButton.Name = "opnTxtFileButton";
             this.opnTxtFileButton.Size = new System.Drawing.Size(108, 34);
             this.opnTxtFileButton.TabIndex = 5;
@@ -111,7 +111,7 @@
             this.opnfileTxt.Cursor = System.Windows.Forms.Cursors.Default;
             this.opnfileTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.opnfileTxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.opnfileTxt.Location = new System.Drawing.Point(35, 280);
+            this.opnfileTxt.Location = new System.Drawing.Point(35, 267);
             this.opnfileTxt.Multiline = true;
             this.opnfileTxt.Name = "opnfileTxt";
             this.opnfileTxt.ReadOnly = true;

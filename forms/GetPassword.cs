@@ -17,6 +17,7 @@ namespace hideYaPasswordWFA
     {
         passcode _passcodeObj=new passcode();
         PassSecurity _PassSecObj = new PassSecurity();
+        email_and_key_text_file txtfileObj = new email_and_key_text_file();
         public GetPassword()
         {
             InitializeComponent();
@@ -35,13 +36,11 @@ namespace hideYaPasswordWFA
 
         private void opnTxtFileButton_Click(object sender, EventArgs e)
         {
-            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
             _passcodeObj.ShowDialog();
             if (_passcodeObj.IspasscodeRight == true)
             {
-                System.IO.FileInfo fileObj = new System.IO.FileInfo(filename);
-                fileObj.Attributes = System.IO.FileAttributes.ReadOnly;
-                System.Diagnostics.Process.Start(fileObj.FullName);
+                txtfileObj.Show();
+
             }
         }
 
