@@ -109,6 +109,7 @@ namespace hideYaPasswordWFA
                 MessageBox.Show("Invalid Passcode", "Program will END");
                 Environment.Exit(1);
             }
+            this.passcodeTxtBox.Clear();
             this.Close();
                        
           }
