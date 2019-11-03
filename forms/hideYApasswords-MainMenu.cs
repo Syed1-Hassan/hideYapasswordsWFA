@@ -16,5 +16,25 @@ namespace hideYApasswordWFA
         {
             InitializeComponent();
         }
+
+        private void get_Password_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void useEmailLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
