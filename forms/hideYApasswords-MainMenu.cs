@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using hideYApasswordsWFA.classes;
+using System.IO;
 
 namespace hideYApasswordWFA
 {
@@ -17,24 +19,29 @@ namespace hideYApasswordWFA
             InitializeComponent();
         }
 
-        private void get_Password_Click(object sender, EventArgs e)
+        private void UseKeyBTN_Click(object sender, EventArgs e)
         {
-           
+            decrypt _decryptObj = new decrypt();
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+
+            if ((File.Exists(filename)) && PswrdfrmKeyTxtBox.Text != "")
+            {
+                string originalPassword = _decryptObj.funcDecrypt(PswrdfrmKeyTxtBox.Text);
+                MessageBox.Show(originalPassword, "Your orignal password is :");
+            }
         }
 
-        private void useEmailLbl_Click(object sender, EventArgs e)
+        private void UseEmailBTN_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            PassSecurity _passSecObj = new PassSecurity();
+            decrypt _decryptObj = new decrypt();
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+            if ((File.Exists(filename)) && PswrdfrmEmailTxtBox.Text != "")
+            {
+                string fetchedPasswordFrmDir = _passSecObj.fetchPasswordFromDirectory(filename, PswrdfrmEmailTxtBox.Text);
+                string originalPassword = _decryptObj.funcDecrypt(fetchedPasswordFrmDir);
+                MessageBox.Show(originalPassword, "Your orignal password is :");
+            }
         }
     }
 }
