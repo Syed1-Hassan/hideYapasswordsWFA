@@ -36,8 +36,8 @@
             this.lableEnterEmail = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.get_Password = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Show_Password = new System.Windows.Forms.TabPage();
+            this.FilerichTxtBox = new System.Windows.Forms.RichTextBox();
             this.showPasswordBTN = new System.Windows.Forms.Button();
             this.UseEmailBTN = new System.Windows.Forms.Button();
             this.UseKeyBTN = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             mainMenu = new System.Windows.Forms.TabControl();
             mainMenu.SuspendLayout();
             this.set_Password.SuspendLayout();
-            this.get_Password.SuspendLayout();
+            this.Show_Password.SuspendLayout();
             this.SuspendLayout();
             // 
             // NoteLbl
@@ -69,7 +69,7 @@
             // 
             mainMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             mainMenu.Controls.Add(this.set_Password);
-            mainMenu.Controls.Add(this.get_Password);
+            mainMenu.Controls.Add(this.Show_Password);
             mainMenu.Location = new System.Drawing.Point(12, 12);
             mainMenu.Name = "mainMenu";
             mainMenu.SelectedIndex = 0;
@@ -138,33 +138,33 @@
             this.textBox1.Size = new System.Drawing.Size(150, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // get_Password
+            // Show_Password
             // 
-            this.get_Password.Controls.Add(this.richTextBox1);
-            this.get_Password.Controls.Add(this.showPasswordBTN);
-            this.get_Password.Controls.Add(this.UseEmailBTN);
-            this.get_Password.Controls.Add(this.UseKeyBTN);
-            this.get_Password.Controls.Add(this.PswrdfrmKeyTxtBox);
-            this.get_Password.Controls.Add(this.PswrdfrmEmailTxtBox);
-            this.get_Password.Controls.Add(this.label1);
-            this.get_Password.Controls.Add(NoteLbl);
-            this.get_Password.Controls.Add(this.useKeyLbl);
-            this.get_Password.Controls.Add(this.useEmailLbl);
-            this.get_Password.Location = new System.Drawing.Point(4, 22);
-            this.get_Password.Name = "get_Password";
-            this.get_Password.Padding = new System.Windows.Forms.Padding(3);
-            this.get_Password.Size = new System.Drawing.Size(602, 389);
-            this.get_Password.TabIndex = 1;
-            this.get_Password.Text = "Get password";
-            this.get_Password.UseVisualStyleBackColor = true;
+            this.Show_Password.Controls.Add(this.FilerichTxtBox);
+            this.Show_Password.Controls.Add(this.showPasswordBTN);
+            this.Show_Password.Controls.Add(this.UseEmailBTN);
+            this.Show_Password.Controls.Add(this.UseKeyBTN);
+            this.Show_Password.Controls.Add(this.PswrdfrmKeyTxtBox);
+            this.Show_Password.Controls.Add(this.PswrdfrmEmailTxtBox);
+            this.Show_Password.Controls.Add(this.label1);
+            this.Show_Password.Controls.Add(NoteLbl);
+            this.Show_Password.Controls.Add(this.useKeyLbl);
+            this.Show_Password.Controls.Add(this.useEmailLbl);
+            this.Show_Password.Location = new System.Drawing.Point(4, 22);
+            this.Show_Password.Name = "Show_Password";
+            this.Show_Password.Padding = new System.Windows.Forms.Padding(3);
+            this.Show_Password.Size = new System.Drawing.Size(602, 389);
+            this.Show_Password.TabIndex = 1;
+            this.Show_Password.Text = "Show password";
+            this.Show_Password.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // FilerichTxtBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(40, 244);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(525, 123);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
+            this.FilerichTxtBox.Location = new System.Drawing.Point(40, 244);
+            this.FilerichTxtBox.Name = "FilerichTxtBox";
+            this.FilerichTxtBox.Size = new System.Drawing.Size(525, 123);
+            this.FilerichTxtBox.TabIndex = 14;
+            this.FilerichTxtBox.Text = "";
             // 
             // showPasswordBTN
             // 
@@ -174,6 +174,7 @@
             this.showPasswordBTN.TabIndex = 13;
             this.showPasswordBTN.Text = "Show Hidden Password File";
             this.showPasswordBTN.UseVisualStyleBackColor = true;
+            this.showPasswordBTN.Click += new System.EventHandler(this.showPasswordBTN_Click);
             // 
             // UseEmailBTN
             // 
@@ -257,15 +258,15 @@
             mainMenu.ResumeLayout(false);
             this.set_Password.ResumeLayout(false);
             this.set_Password.PerformLayout();
-            this.get_Password.ResumeLayout(false);
-            this.get_Password.PerformLayout();
+            this.Show_Password.ResumeLayout(false);
+            this.Show_Password.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabPage get_Password;
+        private System.Windows.Forms.TabPage Show_Password;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label useKeyLbl;
         private System.Windows.Forms.Label useEmailLbl;
@@ -280,6 +281,6 @@
         private System.Windows.Forms.Button UseKeyBTN;
         private System.Windows.Forms.TextBox PswrdfrmKeyTxtBox;
         private System.Windows.Forms.Button showPasswordBTN;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox FilerichTxtBox;
     }
 }

@@ -43,5 +43,14 @@ namespace hideYApasswordWFA
                 MessageBox.Show(originalPassword, "Your orignal password is :");
             }
         }
+
+        private void showPasswordBTN_Click(object sender, EventArgs e)
+        {
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+            StreamReader filetxt = new StreamReader(filename);
+            string text = filetxt.ReadToEnd();
+            this.FilerichTxtBox.Text = text;
+            filetxt.Close();
+        }
     }
 }
