@@ -27,6 +27,7 @@ namespace hideYApasswordsWFA.classes
 
             enkey.Add('i', 'Q');
             enkey.Add('o', 'W');
+            enkey.Add('p', '9');
             enkey.Add('a', 'E');
             enkey.Add('s', 'R');
             enkey.Add('d', 'T');
