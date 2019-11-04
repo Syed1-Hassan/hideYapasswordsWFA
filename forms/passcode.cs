@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using hideYApasswordsWFA.classes;
+using hideYApasswordWFA;
+
 namespace hideYaPasswordWFA
 {
     public partial class passcode : Form
@@ -79,6 +81,7 @@ namespace hideYaPasswordWFA
             this.MaximizeBox = false;
             this.Name = "passcode";
             this.Text = "Enter Passcode";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.passcode_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,6 +95,7 @@ namespace hideYaPasswordWFA
             if (!(File.Exists(filename)) && checkPasscodeTxtBox != "" && checkPasscodeTxtBox.Length == 3)
             {
                 _PassSecObj.savePasscode(checkPasscodeTxtBox, filename);
+  
             }
             else if (File.Exists(filename) == true && this.passcodeTxtBox.Text.Length == 3)
             {
@@ -113,5 +117,27 @@ namespace hideYaPasswordWFA
             this.Close();
                        
           }
+
+        private void passcode_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+            if (File.Exists(filename) == true && this.passcodeTxtBox.Text.Length == 3)
+            {
+                string decryptedPasscode = _PassSecObj.decryptPasscode(_PassSecObj.fetchPasscodeFromDirectory(filename));
+                if (decryptedPasscode != this.checkPasscodeTxtBox)
+                {
+                    MessageBox.Show("Invalid Passcode", "Program will END");
+                    Environment.Exit(1);
+                }
+                else
+                    IspasscodeRight = true;
+            }
+            else
+            {
+                MessageBox.Show("Invalid Passcode", "Program will END");
+                Environment.Exit(1);
+            }
+            this.passcodeTxtBox.Clear();
+        }
     }
 }

@@ -75,6 +75,7 @@
             mainMenu.SelectedIndex = 0;
             mainMenu.Size = new System.Drawing.Size(610, 415);
             mainMenu.TabIndex = 0;
+            
             // 
             // set_Password
             // 
@@ -158,6 +159,7 @@
             this.Show_Password.TabIndex = 1;
             this.Show_Password.Text = "Show password";
             this.Show_Password.UseVisualStyleBackColor = true;
+            this.Show_Password.Enter += new System.EventHandler(this.Show_Password_Enter);
             // 
             // FilerichTxtBox
             // 

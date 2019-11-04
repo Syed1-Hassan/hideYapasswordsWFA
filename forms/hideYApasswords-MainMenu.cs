@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using hideYApasswordsWFA.classes;
 using System.IO;
+using hideYaPasswordWFA;
 
 namespace hideYApasswordWFA
 {
+
     public partial class hideYApasswords_MainMenu : Form
     {
+
         public hideYApasswords_MainMenu()
         {
             InitializeComponent();
@@ -70,6 +73,13 @@ namespace hideYApasswordWFA
                 MessageBox.Show("invalid data entry", "Program will exit");
                 Environment.Exit(1);
             }
+        }
+
+
+        private void Show_Password_Enter(object sender, EventArgs e)
+        {
+            passcode _passcodeObj = new passcode();
+            _passcodeObj.ShowDialog();
         }
     }
 }
