@@ -34,8 +34,8 @@
             this.savePsswrdBTN = new System.Windows.Forms.Button();
             this.lableEnterPassword = new System.Windows.Forms.Label();
             this.lableEnterEmail = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxEnterPswrd = new System.Windows.Forms.TextBox();
+            this.txtBoxEnterEmail = new System.Windows.Forms.TextBox();
             this.Show_Password = new System.Windows.Forms.TabPage();
             this.FilerichTxtBox = new System.Windows.Forms.RichTextBox();
             this.showPasswordBTN = new System.Windows.Forms.Button();
@@ -81,8 +81,8 @@
             this.set_Password.Controls.Add(this.savePsswrdBTN);
             this.set_Password.Controls.Add(this.lableEnterPassword);
             this.set_Password.Controls.Add(this.lableEnterEmail);
-            this.set_Password.Controls.Add(this.textBox3);
-            this.set_Password.Controls.Add(this.textBox1);
+            this.set_Password.Controls.Add(this.txtBoxEnterPswrd);
+            this.set_Password.Controls.Add(this.txtBoxEnterEmail);
             this.set_Password.Location = new System.Drawing.Point(4, 22);
             this.set_Password.Name = "set_Password";
             this.set_Password.Padding = new System.Windows.Forms.Padding(3);
@@ -99,6 +99,7 @@
             this.savePsswrdBTN.TabIndex = 6;
             this.savePsswrdBTN.Text = "Save";
             this.savePsswrdBTN.UseVisualStyleBackColor = true;
+            this.savePsswrdBTN.Click += new System.EventHandler(this.savePsswrdBTN_Click_1);
             // 
             // lableEnterPassword
             // 
@@ -124,19 +125,19 @@
             this.lableEnterEmail.TabIndex = 4;
             this.lableEnterEmail.Text = "Enter Email";
             // 
-            // textBox3
+            // txtBoxEnterPswrd
             // 
-            this.textBox3.Location = new System.Drawing.Point(299, 204);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtBoxEnterPswrd.Location = new System.Drawing.Point(299, 204);
+            this.txtBoxEnterPswrd.Name = "txtBoxEnterPswrd";
+            this.txtBoxEnterPswrd.Size = new System.Drawing.Size(150, 20);
+            this.txtBoxEnterPswrd.TabIndex = 2;
             // 
-            // textBox1
+            // txtBoxEnterEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(299, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtBoxEnterEmail.Location = new System.Drawing.Point(299, 79);
+            this.txtBoxEnterEmail.Name = "txtBoxEnterEmail";
+            this.txtBoxEnterEmail.Size = new System.Drawing.Size(150, 20);
+            this.txtBoxEnterEmail.TabIndex = 0;
             // 
             // Show_Password
             // 
@@ -274,8 +275,8 @@
         private System.Windows.Forms.Button savePsswrdBTN;
         private System.Windows.Forms.Label lableEnterPassword;
         private System.Windows.Forms.Label lableEnterEmail;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxEnterPswrd;
+        private System.Windows.Forms.TextBox txtBoxEnterEmail;
         private System.Windows.Forms.TextBox PswrdfrmEmailTxtBox;
         private System.Windows.Forms.Button UseEmailBTN;
         private System.Windows.Forms.Button UseKeyBTN;

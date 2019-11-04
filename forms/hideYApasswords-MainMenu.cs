@@ -52,5 +52,24 @@ namespace hideYApasswordWFA
             this.FilerichTxtBox.Text = text;
             filetxt.Close();
         }
+
+
+        private void savePsswrdBTN_Click_1(object sender, EventArgs e)
+        {
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+            if (txtBoxEnterEmail.Text != "" && txtBoxEnterPswrd.Text != "")
+            {
+                encrypt _encryptObj = new encrypt();
+                _encryptObj.saveEncrypt(txtBoxEnterEmail.Text, _encryptObj.funcEncrypt(txtBoxEnterPswrd.Text), filename);
+                txtBoxEnterEmail.Text = "";
+                txtBoxEnterPswrd.Text = "";
+
+            }
+            else
+            {
+                MessageBox.Show("invalid data entry", "Program will exit");
+                Environment.Exit(1);
+            }
+        }
     }
 }
