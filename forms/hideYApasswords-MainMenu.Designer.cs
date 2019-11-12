@@ -57,7 +57,6 @@
             // 
             NoteLbl.AutoSize = true;
             NoteLbl.CausesValidation = false;
-            NoteLbl.Enabled = false;
             NoteLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             NoteLbl.Location = new System.Drawing.Point(26, 29);
             NoteLbl.Name = "NoteLbl";
@@ -75,7 +74,6 @@
             mainMenu.SelectedIndex = 0;
             mainMenu.Size = new System.Drawing.Size(610, 415);
             mainMenu.TabIndex = 0;
-            
             // 
             // set_Password
             // 
@@ -106,7 +104,6 @@
             // 
             this.lableEnterPassword.AutoSize = true;
             this.lableEnterPassword.CausesValidation = false;
-            this.lableEnterPassword.Enabled = false;
             this.lableEnterPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lableEnterPassword.Location = new System.Drawing.Point(75, 204);
             this.lableEnterPassword.Name = "lableEnterPassword";
@@ -118,7 +115,6 @@
             // 
             this.lableEnterEmail.AutoSize = true;
             this.lableEnterEmail.CausesValidation = false;
-            this.lableEnterEmail.Enabled = false;
             this.lableEnterEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lableEnterEmail.Location = new System.Drawing.Point(75, 79);
             this.lableEnterEmail.Name = "lableEnterEmail";
@@ -217,7 +213,6 @@
             // 
             this.label1.AutoSize = true;
             this.label1.CausesValidation = false;
-            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(37, 42);
             this.label1.Name = "label1";
@@ -230,7 +225,6 @@
             // 
             this.useKeyLbl.AutoSize = true;
             this.useKeyLbl.CausesValidation = false;
-            this.useKeyLbl.Enabled = false;
             this.useKeyLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.useKeyLbl.Location = new System.Drawing.Point(25, 150);
             this.useKeyLbl.Name = "useKeyLbl";
@@ -242,7 +236,6 @@
             // 
             this.useEmailLbl.AutoSize = true;
             this.useEmailLbl.CausesValidation = false;
-            this.useEmailLbl.Enabled = false;
             this.useEmailLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.useEmailLbl.Location = new System.Drawing.Point(25, 80);
             this.useEmailLbl.Name = "useEmailLbl";
