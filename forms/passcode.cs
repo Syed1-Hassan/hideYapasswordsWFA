@@ -16,7 +16,7 @@ namespace hideYaPasswordWFA
     public partial class passcode : Form
     {
        
-        PassSecurity _PassSecObj = new PassSecurity();
+        
         public bool IspasscodeRight = false;
         public string checkPasscodeTxtBox;
         private TextBox passcodeTxtBox;
@@ -88,12 +88,18 @@ namespace hideYaPasswordWFA
         }        
         private void enterPasscodeButton_Click(object sender, EventArgs e)
         {
+            PassSecurity _PassSecObj = new PassSecurity();
             string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
             checkPasscodeTxtBox = passcodeTxtBox.Text;
            
 
             if (!(File.Exists(filename)) && checkPasscodeTxtBox != "" && checkPasscodeTxtBox.Length == 3)
             {
+                MessageBox.Show("3 digit Passcode Saved");
+                MessageBox.Show(string.Format("WARNING:Dont forget you 3 digit passcode \"{0}\"",checkPasscodeTxtBox));
+                MessageBox.Show("if you forget yourpassword view read me");
+
+
                 _PassSecObj.savePasscode(checkPasscodeTxtBox, filename);
   
             }
@@ -120,8 +126,9 @@ namespace hideYaPasswordWFA
 
         private void passcode_FormClosing(object sender, FormClosingEventArgs e)
         {
+            PassSecurity _PassSecObj = new PassSecurity();
             string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
-            if (File.Exists(filename) == true && this.passcodeTxtBox.Text.Length == 3)
+            if (File.Exists(filename) == true )
             {
                 string decryptedPasscode = _PassSecObj.decryptPasscode(_PassSecObj.fetchPasscodeFromDirectory(filename));
                 if (decryptedPasscode != this.checkPasscodeTxtBox)
