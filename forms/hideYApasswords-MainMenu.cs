@@ -76,10 +76,22 @@ namespace hideYApasswordWFA
         }
 
 
-        private void Show_Password_Enter(object sender, EventArgs e)
+        private void hideYApasswords_MainMenu_Load(object sender, EventArgs e)
+        {
+            PassSecurity _PassSecObj = new PassSecurity();
+            string filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\encryptedCode.txt";
+            if (!(File.Exists(filename)))
+            MessageBox.Show(string.Format("FIRST SAVE 3 DIGIT PASSCODE \n1 passcode to rule them all !"));
+            passcode _passcodeObj = new passcode();
+            _passcodeObj.ShowDialog();
+        }
+
+        private void TabPg_show_Password_Enter(object sender, EventArgs e)
         {
             passcode _passcodeObj = new passcode();
             _passcodeObj.ShowDialog();
         }
     }
-}
+    }
+
+        

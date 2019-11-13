@@ -30,13 +30,13 @@
         {
             System.Windows.Forms.Label NoteLbl;
             System.Windows.Forms.TabControl mainMenu;
-            this.set_Password = new System.Windows.Forms.TabPage();
+            this.TabPg_set_Password = new System.Windows.Forms.TabPage();
             this.savePsswrdBTN = new System.Windows.Forms.Button();
             this.lableEnterPassword = new System.Windows.Forms.Label();
             this.lableEnterEmail = new System.Windows.Forms.Label();
             this.txtBoxEnterPswrd = new System.Windows.Forms.TextBox();
             this.txtBoxEnterEmail = new System.Windows.Forms.TextBox();
-            this.Show_Password = new System.Windows.Forms.TabPage();
+            this.TabPg_show_Password = new System.Windows.Forms.TabPage();
             this.FilerichTxtBox = new System.Windows.Forms.RichTextBox();
             this.showPasswordBTN = new System.Windows.Forms.Button();
             this.UseEmailBTN = new System.Windows.Forms.Button();
@@ -49,8 +49,8 @@
             NoteLbl = new System.Windows.Forms.Label();
             mainMenu = new System.Windows.Forms.TabControl();
             mainMenu.SuspendLayout();
-            this.set_Password.SuspendLayout();
-            this.Show_Password.SuspendLayout();
+            this.TabPg_set_Password.SuspendLayout();
+            this.TabPg_show_Password.SuspendLayout();
             this.SuspendLayout();
             // 
             // NoteLbl
@@ -67,28 +67,28 @@
             // mainMenu
             // 
             mainMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            mainMenu.Controls.Add(this.set_Password);
-            mainMenu.Controls.Add(this.Show_Password);
+            mainMenu.Controls.Add(this.TabPg_set_Password);
+            mainMenu.Controls.Add(this.TabPg_show_Password);
             mainMenu.Location = new System.Drawing.Point(12, 12);
             mainMenu.Name = "mainMenu";
             mainMenu.SelectedIndex = 0;
             mainMenu.Size = new System.Drawing.Size(610, 415);
             mainMenu.TabIndex = 0;
             // 
-            // set_Password
+            // TabPg_set_Password
             // 
-            this.set_Password.Controls.Add(this.savePsswrdBTN);
-            this.set_Password.Controls.Add(this.lableEnterPassword);
-            this.set_Password.Controls.Add(this.lableEnterEmail);
-            this.set_Password.Controls.Add(this.txtBoxEnterPswrd);
-            this.set_Password.Controls.Add(this.txtBoxEnterEmail);
-            this.set_Password.Location = new System.Drawing.Point(4, 22);
-            this.set_Password.Name = "set_Password";
-            this.set_Password.Padding = new System.Windows.Forms.Padding(3);
-            this.set_Password.Size = new System.Drawing.Size(602, 389);
-            this.set_Password.TabIndex = 0;
-            this.set_Password.Text = "Set password";
-            this.set_Password.UseVisualStyleBackColor = true;
+            this.TabPg_set_Password.Controls.Add(this.savePsswrdBTN);
+            this.TabPg_set_Password.Controls.Add(this.lableEnterPassword);
+            this.TabPg_set_Password.Controls.Add(this.lableEnterEmail);
+            this.TabPg_set_Password.Controls.Add(this.txtBoxEnterPswrd);
+            this.TabPg_set_Password.Controls.Add(this.txtBoxEnterEmail);
+            this.TabPg_set_Password.Location = new System.Drawing.Point(4, 22);
+            this.TabPg_set_Password.Name = "TabPg_set_Password";
+            this.TabPg_set_Password.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPg_set_Password.Size = new System.Drawing.Size(602, 389);
+            this.TabPg_set_Password.TabIndex = 0;
+            this.TabPg_set_Password.Text = "Set password";
+            this.TabPg_set_Password.UseVisualStyleBackColor = true;
             // 
             // savePsswrdBTN
             // 
@@ -136,26 +136,26 @@
             this.txtBoxEnterEmail.Size = new System.Drawing.Size(150, 20);
             this.txtBoxEnterEmail.TabIndex = 0;
             // 
-            // Show_Password
+            // TabPg_show_Password
             // 
-            this.Show_Password.Controls.Add(this.FilerichTxtBox);
-            this.Show_Password.Controls.Add(this.showPasswordBTN);
-            this.Show_Password.Controls.Add(this.UseEmailBTN);
-            this.Show_Password.Controls.Add(this.UseKeyBTN);
-            this.Show_Password.Controls.Add(this.PswrdfrmKeyTxtBox);
-            this.Show_Password.Controls.Add(this.PswrdfrmEmailTxtBox);
-            this.Show_Password.Controls.Add(this.label1);
-            this.Show_Password.Controls.Add(NoteLbl);
-            this.Show_Password.Controls.Add(this.useKeyLbl);
-            this.Show_Password.Controls.Add(this.useEmailLbl);
-            this.Show_Password.Location = new System.Drawing.Point(4, 22);
-            this.Show_Password.Name = "Show_Password";
-            this.Show_Password.Padding = new System.Windows.Forms.Padding(3);
-            this.Show_Password.Size = new System.Drawing.Size(602, 389);
-            this.Show_Password.TabIndex = 1;
-            this.Show_Password.Text = "Show password";
-            this.Show_Password.UseVisualStyleBackColor = true;
-            this.Show_Password.Enter += new System.EventHandler(this.Show_Password_Enter);
+            this.TabPg_show_Password.Controls.Add(this.FilerichTxtBox);
+            this.TabPg_show_Password.Controls.Add(this.showPasswordBTN);
+            this.TabPg_show_Password.Controls.Add(this.UseEmailBTN);
+            this.TabPg_show_Password.Controls.Add(this.UseKeyBTN);
+            this.TabPg_show_Password.Controls.Add(this.PswrdfrmKeyTxtBox);
+            this.TabPg_show_Password.Controls.Add(this.PswrdfrmEmailTxtBox);
+            this.TabPg_show_Password.Controls.Add(this.label1);
+            this.TabPg_show_Password.Controls.Add(NoteLbl);
+            this.TabPg_show_Password.Controls.Add(this.useKeyLbl);
+            this.TabPg_show_Password.Controls.Add(this.useEmailLbl);
+            this.TabPg_show_Password.Location = new System.Drawing.Point(4, 22);
+            this.TabPg_show_Password.Name = "TabPg_show_Password";
+            this.TabPg_show_Password.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPg_show_Password.Size = new System.Drawing.Size(602, 389);
+            this.TabPg_show_Password.TabIndex = 1;
+            this.TabPg_show_Password.Text = "Show password";
+            this.TabPg_show_Password.UseVisualStyleBackColor = true;
+            this.TabPg_show_Password.Enter += new System.EventHandler(this.TabPg_show_Password_Enter);
             // 
             // FilerichTxtBox
             // 
@@ -249,24 +249,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 461);
             this.Controls.Add(mainMenu);
+            this.MaximizeBox = false;
             this.Name = "hideYApasswords_MainMenu";
             this.Text = "hideYApasswords_MainMenu";
+            this.Load += new System.EventHandler(this.hideYApasswords_MainMenu_Load);
             mainMenu.ResumeLayout(false);
-            this.set_Password.ResumeLayout(false);
-            this.set_Password.PerformLayout();
-            this.Show_Password.ResumeLayout(false);
-            this.Show_Password.PerformLayout();
+            this.TabPg_set_Password.ResumeLayout(false);
+            this.TabPg_set_Password.PerformLayout();
+            this.TabPg_show_Password.ResumeLayout(false);
+            this.TabPg_show_Password.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabPage Show_Password;
+        private System.Windows.Forms.TabPage TabPg_show_Password;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label useKeyLbl;
         private System.Windows.Forms.Label useEmailLbl;
-        private System.Windows.Forms.TabPage set_Password;
+        private System.Windows.Forms.TabPage TabPg_set_Password;
         private System.Windows.Forms.Button savePsswrdBTN;
         private System.Windows.Forms.Label lableEnterPassword;
         private System.Windows.Forms.Label lableEnterEmail;

@@ -82,6 +82,7 @@ namespace hideYaPasswordWFA
             this.Name = "passcode";
             this.Text = "Enter Passcode";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.passcode_FormClosing);
+            this.Load += new System.EventHandler(this.passcode_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +146,11 @@ namespace hideYaPasswordWFA
                 Environment.Exit(1);
             }
             this.passcodeTxtBox.Clear();
+        }
+
+        private void passcode_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
