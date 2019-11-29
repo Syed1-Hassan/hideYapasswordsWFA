@@ -39,7 +39,7 @@ namespace hideYApasswordsWFA.classes
             string passCode = "";
             StreamReader reader = new StreamReader(dir);
             string line = reader.ReadLine();
-            foreach (var s in Regex.Split(line, @"Passcode : "))
+            foreach (var s in Regex.Split(line, @"Passcode :  "))
             {
                 passCode = passCode + s;
             }
@@ -60,7 +60,7 @@ namespace hideYApasswordsWFA.classes
             if (emailMatch.Success)
             {
                 string Fetchemail = emailMatch.ToString();
-                foreach (var s in Regex.Split(Fetchemail, @"^.+\@\w+\.com : "))
+                foreach (var s in Regex.Split(Fetchemail, @"^.+\@\w+\.com :  "))
                 {
                     passWord = passWord + s;
                 }

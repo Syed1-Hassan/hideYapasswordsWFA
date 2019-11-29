@@ -89,6 +89,9 @@ namespace hideYApasswordsWFA.classes
             enkey.Add('@', '&');
             enkey.Add('_', '8');
             enkey.Add('.', 'M');
+            enkey.Add(' ', ' ');
+            enkey.Add(':', ':');
+            
             return enkey;
         }
             
